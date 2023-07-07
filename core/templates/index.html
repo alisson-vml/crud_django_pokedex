@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    {% for pokemon in pokemons %} <!--chave+porcentagem : usar em comandos  -->
+    <li> <!--duas chaves: usar em variaveis -->
+      {{pokemon.nome}} 
+      <img src="{{ pokemon.foto_url }}" alt="Foto de {{ pokemon.nome }}">
+      <a href="{% url 'editar' pokemon.id %}"> Editar </a> 
+      <a href="{% url 'delete' pokemon.id %}"> Deletar </a> 
+    </li> 
+    {% endfor %}
+  </ul>
+
+  <form action="{% url 'salvar'%}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="nome">
+    <button type="submit">Salvar</button>
+  </form>
+
+
+</body>
+
+</html>
