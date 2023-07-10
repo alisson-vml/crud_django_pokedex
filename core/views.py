@@ -6,10 +6,12 @@ def home(request):
     return render(request, "index.html", {"pokemons": pokemons})
 
 def salvar(request):
-    vnome= request.POST.get("nome")
-    fotoUrl= request.POST.get("foto_url")
-    Pokemon.objects.create(nome=vnome, foto_url=fotoUrl)
-    pokemons = Pokemon.objects.all()
+    if request.method == 'POST':
+        vnome= request.POST.get("nome")
+        fotoUrl= request.POST.get("foto_url")
+        Pokemon.objects.create(nome=vnome, foto_url=fotoUrl)
+        pokemons = Pokemon.objects.all()
+        return redirect(home)
     return render(request, "index.html", {"pokemons": pokemons})
 
 def editar( request, id):
