@@ -1,55 +1,49 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokédex</title>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
+  <body>
 
-<body>
+    <div class="title">
+      <a href="https://www.pokemon.com/br/pokedex/" target="_blank">Pokédex</a>
+    </div>
 
-  <div class="title">
-    <a href="https://www.pokemon.com/br/pokedex/" target="_blank">Pokédex</a>
-  </div>
-
-  <div class="pokeNew">
-    <h2 id="titleNewPoke">Adicione um novo Pokémon</h2>
-    <form action="{% url 'salvar'%}" method="POST">
-      {% csrf_token %}
+    <div class="pokeNew">
+      <h2 id="titleNewPoke">Adicione um novo Pokémon</h2>
+      <form action="{% url 'salvar'%}" method="POST">
+        {% csrf_token %}
         <input type="text" name="nome" placeholder="Nome do Pokémon" autocomplete="off" required>
         <input type="url" name="foto_url" placeholder="Link da imagem" autocomplete="off" required>
         <button type="submit">Salvar</button>
-       </form>
-  </div>
+      </form>
+    </div>
 
-  <div class="pokeContainer" id="pokeContainer">
-    <ul>
-      {% for pokemon in pokemons %}
-      <li class="pokeCard">
-        <div class="pokeImage">
-          <a href="https://www.pokemon.com/br/pokedex/{{pokemon.nome.lower}}" target="_blank">
-            <img src="{{ pokemon.foto_url }}" alt="Foto de {{ pokemon.nome }}">
-          </a>
-        </div>
-        <div class="pokeInfo">
-          <p class="pokeName">{{ pokemon.nome }}</p>
-          <div class="pokeActions">
-            <a href="{% url 'editar' pokemon.id %}">Editar</a>
-            <a href="{% url 'delete' pokemon.id %}">Deletar</a>
+    <div class="pokeContainer" id="pokeContainer">
+      <ul>
+        {% for pokemon in pokemons %}
+        <li class="pokeCard">
+          <div class="pokeImage">
+            <a href="https://www.pokemon.com/br/pokedex/{{pokemon.nome.lower}}" target="_blank">
+              <img src="{{ pokemon.foto_url }}" alt="Foto de {{ pokemon.nome }}">
+            </a>
           </div>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-
-
-
-
-</body>
+          <div class="pokeInfo">
+            <p class="pokeName">{{ pokemon.nome }}</p>
+            <div class="pokeActions">
+              <a href="{% url 'editar' pokemon.id %}">Editar</a>
+              <a href="{% url 'delete' pokemon.id %}">Deletar</a>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </body>
 
 </html>
