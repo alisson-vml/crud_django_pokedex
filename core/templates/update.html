@@ -1,21 +1,38 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
+  <div class="title">
+    <h1>Atualize seu Pokémon</h1>
+  </div>
 
-  {{pokemon.nome}}
+  <li class="pokeCard">
+    <div class="pokeImage">
+      <img src="{{ pokemon.foto_url }}" alt="Foto de {{ pokemon.nome }}">
+    </div>
+    <div class="pokeInfo">
+      <p class="pokeName">{{ pokemon.nome }}</p>
+      </div>
+  </li>
 
-  <form action="{% url 'update' pokemon.id %}" method="POST">
-    {% csrf_token %}
-    <input type="text" name="nome" value="{{pokemon.nome}}">
-    <button type="submit">Update</button>
-  </form>
+  <div class="formUpdate">
+    <form action="{% url 'update' pokemon.id %}" method="POST">
+      {% csrf_token %}
+      <h3>Nome</h3>
+      <input type="text" name="nome" value="{{pokemon.nome}}">
+      <h3>Link</h3>
+      <input type="url" name="foto_url" value="{{pokemon.foto_url}}">
+      <button type="submit">Update</button>
+    </form>
+  </div>
 
 
 </body>

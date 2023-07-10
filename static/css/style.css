@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+
+:root{
+  --cor-primaria: #FDFFF7;
+  --cor-segundaria: #3a415a;
+  --cor-terciaria: #B4ADEA;
+  --cor-hover: #2f2f46;
+  
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background: var(--cor-terciaria);
+}
+::-webkit-scrollbar-thumb{
+  background: var(--cor-segundaria);
+}
+::-webkit-scrollbar-thumb:hover{
+  background: #232337;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body, input {
+  background: linear-gradient(to right, var(--cor-primaria), var(--cor-terciaria));
+  color: var(--cor-segundaria);
+  font-family: 'Bai Jamjuree', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  letter-spacing: 5px;
+  padding: 3rem;
+  font-size: 4rem;
+}
+.title{
+  letter-spacing: 5px;
+  padding: 3rem;
+  font-size: 4rem;
+}
+.title a:hover{
+  color: var(--cor-hover);
+}
+.title a{
+  color: var(--cor-segundaria);
+  font-family: 'Bai Jamjuree', sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pokeContainer ul{ 
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Define 3 colunas com largura igual */
+  grid-gap: 4rem;
+  margin-top: 3rem;
+}
+.pokeCard {
+  display: inline-block;
+  width: 200px;
+  background-color: var(--cor-terciaria);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+
+.pokeImage img {
+  width: 100%;
+  background: linear-gradient(to top, var(--cor-terciaria),var(--cor-primaria) 85%);
+  border-radius: 10px;
+}
+
+
+.pokeName {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.pokeActions {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+}
+
+.pokeActions a {
+  background-color: var(--cor-segundaria);
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 0 8px;
+  text-decoration: none;
+  color: var(--cor-primaria);
+}
+.pokeActions a:hover {
+  background-color: var(--cor-hover);
+}
+.pokeNew{
+  background-color: #9984D4;
+  width: 50%;
+  text-align: center;
+  border-radius: 10px;
+}
+#titleNewPoke{
+  color: var(--cor-primaria);
+  margin: 1rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.2rem;
+  overflow: hidden;
+}
+
+button{
+  background-color: var(--cor-segundaria);
+  color: var(--cor-primaria);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16;
+}
+button:hover {
+  background-color: var(--cor-hover);
+}
+input[type="text"],
+input[type="url"] {
+  padding: 10px;
+  border: none;
+  width: 70%;
+  border-radius: 10px;
+}input:focus {
+  outline: none;
+}
+
+.formUpdate{
+  margin-top: 3rem;
+  width: 50%;
+  text-align: center;
+  border-radius: 10px;
+}
+.formUpdate input[type="text"]{
+  width: 30%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 18px;
+}
+
+.formUpdate input[type="url"]{
+  width:70%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 18px;
+}
+.formUpdate button{
+  font-size: 18px;
+  padding: 1rem;
+}
+
+

@@ -7,7 +7,8 @@ def home(request):
 
 def salvar(request):
     vnome= request.POST.get("nome")
-    Pokemon.objects.create(nome=vnome)
+    fotoUrl= request.POST.get("foto_url")
+    Pokemon.objects.create(nome=vnome, foto_url=fotoUrl)
     pokemons = Pokemon.objects.all()
     return render(request, "index.html", {"pokemons": pokemons})
 
@@ -17,8 +18,10 @@ def editar( request, id):
 
 def update(request, id):
     vnome= request.POST.get("nome")
+    fotoUrl= request.POST.get("foto_url")
     pokemon = Pokemon.objects.get(id=id)
     pokemon.nome = vnome
+    pokemon.foto_url = fotoUrl
     pokemon.save()
     return redirect(home)
 

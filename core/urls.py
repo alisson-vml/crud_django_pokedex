@@ -8,5 +8,4 @@ urlpatterns = [
     path('editar/<int:id>', editar, name= 'editar'),
     path('update/<int:id>', update, name= 'update'),
     path('delete/<int:id>', delete, name= 'delete'),
-
 ]
