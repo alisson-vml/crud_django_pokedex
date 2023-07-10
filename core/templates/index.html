@@ -30,7 +30,9 @@
       {% for pokemon in pokemons %}
       <li class="pokeCard">
         <div class="pokeImage">
-          <img src="{{ pokemon.foto_url }}" alt="Foto de {{ pokemon.nome }}">
+          <a href="{% url 'editar' pokemon.id %}">
+            <img src="{{ pokemon.foto_url }}" alt="Foto de {{ pokemon.nome }}">
+          </a>
         </div>
         <div class="pokeInfo">
           <p class="pokeName">{{ pokemon.nome }}</p>
