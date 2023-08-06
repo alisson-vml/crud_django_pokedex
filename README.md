@@ -34,27 +34,27 @@ Além disto é bom ter um editor para trabalhar com o código como o [VSCode](ht
 ### 🎲 Rodando o Back End (servidor)
 
 
-# Clone este repositório
+### Clone este repositório
 ```bash
 git clone https://github.com/alisson-vml/crud_django_pokedex.git
 ```
-# Cria um ambiente virtual para as dependências
+### Cria um ambiente virtual para as dependências
 ```bash
 python -m venv env
 ```
-# ativa seu ambiente
+### Ative seu ambiente virtual
 ```bash
 .\env\Scripts\activate
 ```
-# Instale as dependências
+### Instale as dependências
 ```bash
 pip install -r requirements.txt
 ```
-# Execute a aplicação
+### Execute a aplicação
 ```bash
 python manage.py runserver
 ```
-# O servidor inciará na porta:8000 - acesse <http://localhost:8000/core>
+### O servidor inciará na porta:8000 - acesse <http://localhost:8000/core>
 
 
 
