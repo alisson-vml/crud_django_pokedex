@@ -6,8 +6,8 @@
 
 ## 💻 Projeto
 
-Esse é um projeto simples de um CRUD de uma Pokédex.
-OBS: Tem muita coisa que poderia ser melhor, porém para um CRUD inicial ele serve seu proposito.
+Esse é um projeto simples de um CRUD de uma Pokédex. <br>
+OBS: Tem muitas implementações que poderia ser feitas, porém para um CRUD inicial ele serve seu proposito.
 
 ## ✔️ Tecnologias utilizadas
 
@@ -19,7 +19,7 @@ OBS: Tem muita coisa que poderia ser melhor, porém para um CRUD inicial ele ser
 # :hammer: Funcionalidades do projeto
 
 - `Create`: Adicionar novos Pokémons no seu banco de dados informando o nome e o link da imagem
-- `Editar`: Atualizar informações de um Pokémon específico
+- `Update`: Atualizar informações de um Pokémon específico
 - `Delete`: Remover o Pokémon do seu banco de dados
 - `Titulo`: Ao clicar no titulo você será redirecionado para a página de Pokémons, para obter o links das imagens
 
@@ -28,28 +28,33 @@ OBS: Tem muita coisa que poderia ser melhor, porém para um CRUD inicial ele ser
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com),[Python](https://www.python.org/downloads/).
+[Git](https://git-scm.com),[Python](https://www.python.org/downloads/).<br>
 Além disto é bom ter um editor para trabalhar com o código como o [VSCode](https://code.visualstudio.com/)
 
 ### 🎲 Rodando o Back End (servidor)
 
-```bash
+
 # Clone este repositório
-$ git clone https://github.com/alisson-vml/crud_django_pokedex.git
-
-# Cria um ambiente virtual para as dependências
-$ python -m venv env
-
-# ativa seu ambiente
-$ .\env\Scripts\activate
-
-# Instale as dependências
-$ pip install -r requirements.txt
-
-# Execute a aplicação
-$ python manage.py runserver
-
-# O servidor inciará na porta:8000 - acesse <http://localhost:8000/core>
+```bash
+git clone https://github.com/alisson-vml/crud_django_pokedex.git
 ```
+# Cria um ambiente virtual para as dependências
+```bash
+python -m venv env
+```
+# ativa seu ambiente
+```bash
+.\env\Scripts\activate
+```
+# Instale as dependências
+```bash
+pip install -r requirements.txt
+```
+# Execute a aplicação
+```bash
+python manage.py runserver
+```
+# O servidor inciará na porta:8000 - acesse <http://localhost:8000/core>
+
 
 
