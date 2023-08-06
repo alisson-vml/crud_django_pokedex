@@ -27,6 +27,7 @@
   padding: 0;
 }
 body, input {
+  
   background: linear-gradient(to right, var(--cor-primaria), var(--cor-terciaria));
   color: var(--cor-segundaria);
   font-family: 'Bai Jamjuree', sans-serif;
