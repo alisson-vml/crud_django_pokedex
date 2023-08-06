@@ -16,7 +16,7 @@ OBS: Tem muitas implementações que poderia ser feitas, porém para um CRUD ini
 - ``HTML``
 - ``CSS``
 
-# :hammer: Funcionalidades do projeto
+## :hammer: Funcionalidades do projeto
 
 - `Create`: Adicionar novos Pokémons no seu banco de dados informando o nome e o link da imagem
 - `Update`: Atualizar informações de um Pokémon específico
