@@ -7,7 +7,7 @@
 ## 💻 Projeto
 
 Esse é um projeto simples de um CRUD de uma Pokédex. <br>
-OBS: Tem muitas implementações que poderia ser feitas, porém para um CRUD inicial ele serve seu proposito.
+OBS: Tem muitas funcionalidades que poderia ser feitas, porém para um CRUD inicial ele serve seu proposito.
 
 ## ✔️ Tecnologias utilizadas
 
